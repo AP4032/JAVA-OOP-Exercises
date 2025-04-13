@@ -16,7 +16,7 @@ ThemePark
  ├── Visitor
  ├── VIPVisitor (extends Visitor)
  ├── Admin
- └── Main (Runner)
+ └── Main0 (Runner)
 ```
 
 ## Implementation
@@ -105,9 +105,9 @@ public class Admin {
 }
 ```
 
-### `Main.java`
+### `Main0.java`
 ```java
-public class Main {
+public class Main0 {
     public static void main(String[] args) {
         Ride rollerCoaster = new Ride("Roller Coaster", 5, 3);
         Visitor john = new Visitor("John");

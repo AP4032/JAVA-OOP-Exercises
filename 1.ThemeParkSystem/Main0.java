@@ -1,8 +1,6 @@
-package main;
-
 import java.util.Scanner;
 
-public class Main {
+public class Main0 {
     public static final String RESET = "\u001B[0m";
     public static final String LIGHT_GRAY = "\u001B[37m";  // Soft neutral gray
     public static final String SOFT_BLUE = "\u001B[94m";    // Soft blue for info

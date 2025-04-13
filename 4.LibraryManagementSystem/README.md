@@ -15,7 +15,7 @@ LibraryManagementSystem
  ├── User
  ├── Admin
  ├── Library
- ├── Main (Runner)
+ ├── Main0 (Runner)
 ```
 
 ## Implementation
@@ -106,9 +106,9 @@ public class Admin {
 }
 ```
 
-### `Main.java`
+### `Main0.java`
 ```java
-public class Main {
+public class Main0 {
     public static void main(String[] args) {
         Admin admin = new Admin();
         Book book1 = new Book("1984", "George Orwell");

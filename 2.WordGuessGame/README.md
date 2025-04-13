@@ -14,7 +14,7 @@ This is a simple **Word Guessing Game** implemented in Java, using **OOP princip
 WordGuessGame
  ├── Game
  ├── Player
- ├── Main (Runner)
+ ├── Main0 (Runner)
 ```
 
 ## Implementation
@@ -85,11 +85,11 @@ public class Player {
 }
 ```
 
-### `Main.java`
+### `Main0.java`
 ```java
 import java.util.Scanner;
 
-public class Main {
+public class Main0 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");

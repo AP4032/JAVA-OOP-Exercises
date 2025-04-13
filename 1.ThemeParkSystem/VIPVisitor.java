@@ -1,5 +1,3 @@
-package main;
-
 public class VIPVisitor extends Visitor {
     public VIPVisitor(String name) {
         super(name);
