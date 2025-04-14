@@ -15,7 +15,7 @@ FoodOrderingSystem
  ├── Order
  ├── Customer
  ├── Restaurant
- ├── Main0 (Runner)
+ ├── Main (Runner)
 ```
 
 ## Implementation
@@ -121,9 +121,9 @@ public class Restaurant {
 }
 ```
 
-### `Main0.java`
+### `Main.java`
 ```java
-public class Main0 {
+public class Main {
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();
         MenuItem burger = new MenuItem("Burger", 5.99);

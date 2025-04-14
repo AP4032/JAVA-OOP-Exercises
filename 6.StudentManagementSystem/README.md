@@ -14,7 +14,7 @@ StudentManagementSystem
  ├── Student
  ├── Course
  ├── Admin
- ├── Main0 (Runner)
+ ├── Main (Runner)
 ```
 
 ## Implementation
@@ -96,9 +96,9 @@ public class Admin {
 }
 ```
 
-### `Main0.java`
+### `Main.java`
 ```java
-public class Main0 {
+public class Main {
     public static void main(String[] args) {
         Admin admin = new Admin();
         Student student1 = new Student("Alice", 101);

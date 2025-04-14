@@ -19,26 +19,26 @@ public class Ride {
         if (visitors.size() < capacity) {
             if (!added) {
                 visitors.add(visitor);
-                System.out.println(Main0.MUTED_GREEN + visitor.getName() + " added to Ride list for " + instrument + Main0.RESET);
+                System.out.println(Main.MUTED_GREEN + visitor.getName() + " added to Ride list for " + instrument + Main.RESET);
             } else
-                System.out.println(Main0.LIGHT_GRAY + visitor.getName() + " is already in the Ride list for " + instrument + Main0.RESET);
-        } else System.out.println(Main0.LIGHT_GRAY + "The queue is full!" + Main0.RESET);
+                System.out.println(Main.LIGHT_GRAY + visitor.getName() + " is already in the Ride list for " + instrument + Main.RESET);
+        } else System.out.println(Main.LIGHT_GRAY + "The queue is full!" + Main.RESET);
     }
 
     public void printQueue() {
         if (!visitors.isEmpty()) {
             int counter = 1;
             for (Visitor visitor : visitors) {
-                System.out.println(Main0.MUTED_GREEN + counter + ". " + visitor.getName() + Main0.RESET);
+                System.out.println(Main.MUTED_GREEN + counter + ". " + visitor.getName() + Main.RESET);
                 counter++;
             }
         }else{
-            System.out.println(Main0.LIGHT_GRAY + "The queue is empty!" + Main0.RESET);
+            System.out.println(Main.LIGHT_GRAY + "The queue is empty!" + Main.RESET);
         }
     }
 
     public void startRide() throws InterruptedException {
-        if (visitors.isEmpty()) System.out.println(Main0.LIGHT_GRAY + "No one is waiting in queue to ride!" + Main0.RESET);
+        if (visitors.isEmpty()) System.out.println(Main.LIGHT_GRAY + "No one is waiting in queue to ride!" + Main.RESET);
         else {
             while (!visitors.isEmpty() && capacity > 0) {
                 Visitor visitor = visitors.removeFirst();
@@ -46,18 +46,18 @@ public class Ride {
                     VIPVisitor vipVisitor = (VIPVisitor) visitor;
                     vipVisitor.priorAccess();
                     for (int i = duration * 2; i > 0; i--) {
-                        System.out.println(Main0.LIGHT_GRAY + i + "..." + Main0.RESET);
+                        System.out.println(Main.LIGHT_GRAY + i + "..." + Main.RESET);
                         Thread.sleep(1000);
                     }
                 } else {
-                    System.out.println(Main0.LIGHT_GRAY + visitor.getName() + " is riding " + instrument + Main0.RESET);
+                    System.out.println(Main.LIGHT_GRAY + visitor.getName() + " is riding " + instrument + Main.RESET);
                     for (int i = duration; i > 0; i--) {
-                        System.out.println(Main0.LIGHT_GRAY + i + "..." + Main0.RESET);
+                        System.out.println(Main.LIGHT_GRAY + i + "..." + Main.RESET);
                         Thread.sleep(1000);
                     }
                 }
             }
-            System.out.println(Main0.MUTED_GREEN + "Ride has been stopped. \n queue is empty." + Main0.RESET);
+            System.out.println(Main.MUTED_GREEN + "Ride has been stopped. \n queue is empty." + Main.RESET);
         }
     }
 }

@@ -15,7 +15,7 @@ OnlineShoppingSystem
  ├── ShoppingCart
  ├── Customer
  ├── Store
- ├── Main0 (Runner)
+ ├── Main (Runner)
 ```
 
 ## Implementation
@@ -118,9 +118,9 @@ public class Store {
 }
 ```
 
-### `Main0.java`
+### `Main.java`
 ```java
-public class Main0 {
+public class Main {
     public static void main(String[] args) {
         Store store = new Store();
         Product laptop = new Product("Laptop", 999.99);

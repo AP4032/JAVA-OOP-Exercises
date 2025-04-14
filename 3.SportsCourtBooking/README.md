@@ -14,7 +14,7 @@ SportsBookingSystem
  ├── Court
  ├── Player
  ├── Admin
- ├── Main0 (Runner)
+ ├── Main (Runner)
 ```
 
 ## Implementation
@@ -95,9 +95,9 @@ public class Admin {
 }
 ```
 
-### `Main0.java`
+### `Main.java`
 ```java
-public class Main0 {
+public class Main {
     public static void main(String[] args) {
         Admin admin = new Admin();
         Court basketballCourt = new Court("Basketball");

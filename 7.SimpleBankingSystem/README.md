@@ -15,7 +15,7 @@ SimpleBankingSystem
  ├── BankAccount
  ├── Customer
  ├── Bank
- ├── Main0 (Runner)
+ ├── Main (Runner)
 ```
 
 ## Implementation
@@ -99,9 +99,9 @@ public class Bank {
 }
 ```
 
-### `Main0.java`
+### `Main.java`
 ```java
-public class Main0 {
+public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank();
         Customer customer1 = new Customer("Alice", "123456");
