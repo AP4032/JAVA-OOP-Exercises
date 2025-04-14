@@ -16,7 +16,7 @@ public class Main1 {
         }else if (mode == 2) {
             System.out.println("enter player's name / or type done to start the game:");
             String option = wordScanner.next();
-            ArrayList<Player> players = new ArrayList<Player>();
+            ArrayList<Player> players = new ArrayList<>();
             while(!option.equals("done")) {
                 players.add(new Player(option));
                 System.out.println("enter player's name / or type done to start the game:");
