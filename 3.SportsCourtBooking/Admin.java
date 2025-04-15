@@ -41,7 +41,7 @@ public class Admin {
     public void GetListCourt() {
         int number = 1;
         for (Court Court : ListCourt) {
-            System.out.println(number + "." + Court.getSportType());
+            System.out.println(number + "." + Court.getSportType() +"| Available:"+map.get(number).getAvailability());
             number++;
         }
     }
@@ -65,36 +65,49 @@ public class Admin {
     }
 
     public Boolean reserveCourt(int number) {
-        if (number >= Number || number <= 0 ) {
-            System.out.println(Red+"The number you sent is incorrect, please try again"+Reset);
+        if (number >= Number || number <= 0) {
+            System.out.println(Red + "The number you sent is incorrect, please try again" + Reset);
             return false;
         } else {
             if (map.get(number).bookCourt()) {
 //           System.out.println("The court has been booked successfully");
                 return true;
             } else {
-                System.out.println(Red+"The reservation has already been made"+Reset);
+                System.out.println(Red + "The reservation has already been made" + Reset);
                 return false;
             }
         }
 
     }
-    public boolean CancellCourt(int number)
-    {
-        if (number >= Number || number <= 0 ) {
-            System.out.println(Red+"The number you sent is incorrect, please try again"+Reset);
+
+    public boolean CancellCourt(int number) {
+        if (number >= Number || number <= 0) {
+            System.out.println(Red + "The number you sent is incorrect, please try again" + Reset);
             return false;
         } else {
             if (map.get(number).CancellCourt()) {
 //           System.out.println(Green+"The court has been Cancelled successfully"+Reset);
                 return true;
             } else {
-                System.out.println(Red+"This land has not been reserved yet."+Reset);
+                System.out.println(Red + "This land has not been reserved yet." + Reset);
                 return false;
             }
         }
     }
 
+    public void AddGame() {
+        Court Tennis = new Court("Tennis");
+        Court Volleyball = new Court("Volleyball");
+        Court Football = new Court("Football");
+        Court Hockey = new Court("Hockey");
+        Court Futsal = new Court("Futsal");
+        Court Basketball = new Court("Basketball");
+        AddCourt(Tennis);
+        AddCourt(Volleyball);
+        AddCourt(Hockey);
+        AddCourt(Futsal);
+        AddCourt(Basketball);
+    }
 
 
 }

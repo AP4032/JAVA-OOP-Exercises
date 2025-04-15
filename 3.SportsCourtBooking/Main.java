@@ -9,18 +9,7 @@ public class Main {
         String Reset = "\033[0m";
         Scanner input = new Scanner(System.in);
         Admin admin = new Admin();
-        Court Tennis = new Court("Tennis");
-        Court Volleyball = new Court("Volleyball");
-        Court Football = new Court("Football");
-        Court Hockey = new Court("Hockey");
-        Court Futsal = new Court("Futsal");
-        Court Basketball = new Court("Basketball");
-        admin.AddCourt(Tennis);
-        admin.AddCourt(Volleyball);
-        admin.AddCourt(Football);
-        admin.AddCourt(Hockey);
-        admin.AddCourt(Futsal);
-        admin.AddCourt(Basketball);
+        admin.AddGame();
         System.out.println("\033[31m███    ███\033[34m ██   ██    ");
         System.out.println("\033[31m████  ████\033[34m ██   ██    ");
         System.out.println("\033[31m██ ████ ██\033[34m ███████    ");
@@ -43,6 +32,7 @@ public class Main {
                         Player booker = admin.SetPlayer(Name);
                         admin.GetListCourt();
                         int Choice = input.nextInt();
+                        input.nextLine();
                         if (admin.reserveCourt(Choice)) {
                             booker.reserveCourt(admin, Choice);
                         } else {
@@ -63,6 +53,7 @@ public class Main {
                         Player Canceller = admin.SetPlayer(NameCancel);
                         Canceller.GetListCourt();
                         int Choice = input.nextInt();
+                        input.nextLine();
                         if (admin.CancellCourt(Choice)) {
                             Canceller.CancellCourt(admin, Choice);
                         }
