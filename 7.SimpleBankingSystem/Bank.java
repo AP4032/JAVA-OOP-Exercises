@@ -17,8 +17,5 @@ public class Bank {
 
     }
 
-    public void addCustomer(String username, String password) {
-        map.put(username, new Customer(username, password));
-    }
 
 }
