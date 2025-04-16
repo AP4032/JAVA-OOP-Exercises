@@ -51,7 +51,6 @@ public class Game
                     score += 50;
                 }
             }
-
             if (!correct)
             {
                 attempts--;

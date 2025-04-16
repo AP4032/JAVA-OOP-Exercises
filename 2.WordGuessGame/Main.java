@@ -30,7 +30,7 @@ public class Main
             }
             if (isBestScore && scores.size() > 1)
             {
-                System.out.println("Well done! " + game.score + " is your best score till now.");
+                System.out.println("Well done! " + game.score + " is your best score till now!");
             }
             System.out.println("Would you like to play again? (y/n)");
             String answer = scanner.nextLine();
