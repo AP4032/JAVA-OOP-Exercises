@@ -47,9 +47,10 @@ public class Main {
                     boolean bye = false;
 
                     for (Court c : admin.getCourts()) {
-                        if( c.getSportType().equals(courtNameT)) {
+                        if( c.getSportType().equals(courtNameT) && (c.isAvailable())) {
                             player.bookCourt(c);
                             bye = true;
+                            break;
 
                         }
                     }
@@ -70,6 +71,7 @@ public class Main {
                             c.releaseCourt();
                             System.out.println("ok!");
                             Bye = true;
+                            break;
                         }
                     }
                     if (Bye) {

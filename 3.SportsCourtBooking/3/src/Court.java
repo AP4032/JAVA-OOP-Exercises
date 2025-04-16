@@ -19,6 +19,9 @@ public class Court {
         }
         return false;
     }
+    public boolean isAvailable() {
+        return isAvailable;
+    }
 
 
     public String getSportType() {
