@@ -8,6 +8,7 @@ public class Main
         Store store = new Store();
         int choice;
         int option;
+
         System.out.println("Welcome to our Shopping System!");
         do
         {

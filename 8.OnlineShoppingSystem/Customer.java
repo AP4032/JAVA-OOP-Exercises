@@ -8,17 +8,14 @@ public class Customer
         this.name = name;
         this.cart = new ShoppingCart();
     }
-
     public String getName()
     {
         return name;
     }
-
     public void addToCart(Product product)
     {
         cart.addItem(product);
     }
-
     public void placeOrder()
     {
         cart.checkout();

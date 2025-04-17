@@ -9,13 +9,11 @@ public class Store
     {
         this.inventory = new ArrayList<>();
     }
-
     public void addProduct(Product product)
     {
         inventory.add(product);
         System.out.println(product.getName() + " added to store.");
     }
-
     public void getProducts()
     {
         if (inventory.isEmpty())

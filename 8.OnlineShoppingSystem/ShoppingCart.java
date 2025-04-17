@@ -9,13 +9,11 @@ public class ShoppingCart
     {
         this.items = new ArrayList<>();
     }
-
     public void addItem(Product product)
     {
         items.add(product);
         System.out.println(product.getName() + " added to cart.");
     }
-
     public double calculateTotal()
     {
         double total = 0;
@@ -25,7 +23,6 @@ public class ShoppingCart
         }
         return total;
     }
-
     public void checkout()
     {
         System.out.println("Total amount: $" + calculateTotal());
