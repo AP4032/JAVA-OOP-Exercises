@@ -54,11 +54,4 @@ public class User {
         book.returnedBook();
         System.out.println(fName + " " + lName + " returned the book: " + book.getName());
     }
-
-    public LocalDate dueDate(Book book) {
-        if (book.getBorrowDate() != null) {
-            return book.getBorrowDate().plusDays(15);
-        }
-        return null;
-    }
 }
