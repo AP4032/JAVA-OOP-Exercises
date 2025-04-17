@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,18 +19,6 @@ public class Library {
         System.out.println("No result for book named: " + bookName);
         return null;
     }
-
-    public void trackingOverDueBook(Book book) {
-        for (User user : users) {
-            if (user.getBooks().contains(book)) {
-                LocalDate dueDate = user.dueDate(book);
-                if (dueDate != null && dueDate.isBefore(LocalDate.now())) {
-                    System.out.println(user.getFName() + " " + user.getLName() + " should return the book '" + book.getName() + "' (Overdue by " + java.time.temporal.ChronoUnit.DAYS.between(dueDate, LocalDate.now()) + " days).");
-                }
-            }
-        }
-    }
-
     public User userAuthentication(String username, String password) {
         for (User user : users) {
             if (user.getUserName().equals(username) && user.getPassword().equals(password)) {

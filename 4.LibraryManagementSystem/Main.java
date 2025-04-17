@@ -89,7 +89,7 @@ public class Main {
                         if (bookToBorrow != null) {
                             System.out.print("Enter borrow date (yyyy-MM-dd): ");
                             String borrowDateStr = scanner.nextLine();
-                            loggedInUser.borrowBook(bookToBorrow, borrowDateStr); // Passing the borrow date as a string
+                            loggedInUser.borrowBook(bookToBorrow, borrowDateStr);
                         } else {
                             System.out.println("Book not found.");
                         }
