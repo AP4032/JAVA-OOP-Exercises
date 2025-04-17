@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Please register your account in our customer list.");
         System.out.println("Enter your name: ");
         String name = sc.nextLine();
-        System.out.println("Enter account number: ");
+        System.out.println("Enter your account number: ");
         String accountNumber = sc.nextLine();
         Customer customer = new Customer(name, accountNumber);
         bank.addCustomer(customer);

@@ -9,7 +9,6 @@ public class Bank
     {
         this.customers = new ArrayList<>();
     }
-
     public void addCustomer(Customer customer)
     {
         customers.add(customer);

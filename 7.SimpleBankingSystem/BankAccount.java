@@ -8,7 +8,6 @@ public class BankAccount
         this.accountNumber = accountNumber;
         this.balance = 0.0;
     }
-
     public void deposit(double amount)
     {
         if (amount > 0)
@@ -21,7 +20,6 @@ public class BankAccount
             System.out.println("Invalid deposit amount.");
         }
     }
-
     public void withdraw(double amount)
     {
         if (amount > 0 && amount <= balance)
@@ -34,12 +32,10 @@ public class BankAccount
             System.out.println("Insufficient balance or invalid amount.");
         }
     }
-
     public double getBalance()
     {
         return balance;
     }
-
     public String getAccountNumber()
     {
         return accountNumber;
