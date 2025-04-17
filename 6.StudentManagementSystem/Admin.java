@@ -12,7 +12,7 @@ public class Admin {
 
     public void addStudent(Student student) {
         students.add(student);
-        System.out.println("Added student: " + student);
+        System.out.println("Added student: " + student.getName());
     }
 
     public void addCourse(Course course) {
