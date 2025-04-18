@@ -5,7 +5,7 @@ public class ShoppingCart {
     private List<Product> items;
 
     public ShoppingCart() {
-        this.items = new ArrayList<>();
+         this.items = new ArrayList<>();
     }
 
     public void addItem(Product product, int quantity) {
@@ -32,16 +32,15 @@ public class ShoppingCart {
             System.out.println("- " + product.getName() + " | $" + product.getPrice());
     }
 
-    public double calculateTotal() {
+        public double calculateTotal() {
         double total = 0;
         for (Product item : items) {
             total += item.getPrice();
         }
         return total;
     }
-
-    public void checkout() {
-        if (items.isEmpty()) {
+    public void checkout(){
+        if(items.isEmpty()){
             System.out.println(" Cannot checkout: cart is empty");
             return;
         }
