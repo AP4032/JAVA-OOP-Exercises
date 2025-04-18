@@ -9,8 +9,9 @@ public class Game {
     private char[] guessedWord;
     private int attempts;
 
-    public void play() {
+    public void play(Player player) {
         Random random = new Random();
+
         this.chosenWord = words[random.nextInt(words.length)];
         this.guessedWord = new char[chosenWord.length()];
         for (int i = 0; i < guessedWord.length; i++) {
@@ -19,6 +20,7 @@ public class Game {
         this.attempts = chosenWord.length() + 3;
         Scanner scanner = new Scanner(System.in);
         while (attempts > 0) {
+            System.out.println("Your Score = "+player.getScore());
             System.out.println("Word: " + String.valueOf(guessedWord));
             System.out.print("Enter a letter: ");
             char guess = scanner.next().charAt(0);
@@ -38,6 +40,7 @@ public class Game {
 
             if (String.valueOf(guessedWord).equals(chosenWord)) {
                 System.out.println("Congratulations! You guessed the word: " + chosenWord);
+                player.setScore(player.getScore() + 1);
                 return;
             }
         }
@@ -63,4 +66,5 @@ public class Game {
 //            }
 //        }
 //    }
+
 }

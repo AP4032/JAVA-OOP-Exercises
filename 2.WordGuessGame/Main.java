@@ -17,13 +17,14 @@ public class Main {
                 case 1:
                     askName();
                     playGame();
-                    if (askReplay()) {
-                        playGame();
-                    }
-                    else{
-                        System.out.println("Game Over!");
-                    }
-                    return;
+                    do {
+                        if (askReplay()) {
+                            playGame();
+                        } else {
+                            System.out.println("Game Over!");
+                            return;
+                        }
+                    }while (true);
                 case 2:
                     return;
                 default:
@@ -32,8 +33,9 @@ public class Main {
         }while (true);
     }
     private static boolean askReplay() {
+        Scanner s = new Scanner(System.in);
         System.out.println("Play again? (yes/no)");
-        return scanner.next().equalsIgnoreCase("yes");
+        return s.next().equalsIgnoreCase("yes");
     }
     private static void playGame() {
         Game game = new Game();
@@ -67,13 +69,14 @@ public class Main {
                         game.setWords(Subject.getName());
                         break;
                 }
+                break;
             }
         }
         if (!correct) {
             System.out.println("Invalid input. Try again.");
             playGame();
         }
-        game.play();
+        game.play(player);
     }
     private static void askName(){
         System.out.println("Enter your name:");
