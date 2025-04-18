@@ -11,7 +11,7 @@ public class Store {
 
     public void addProduct(Product product) {
         inventory.add(product);
-        System.out.println( product.getName() + " added to store.");
+        System.out.println(product.getName() + " added to store.");
     }
 
 

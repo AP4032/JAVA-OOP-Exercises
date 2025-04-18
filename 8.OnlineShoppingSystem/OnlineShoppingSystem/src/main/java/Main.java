@@ -24,26 +24,26 @@ public class Main {
             System.out.println("9. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume newline character
 
             switch (choice) {
                 case 1:
-
+                    // Register
                     System.out.print("Enter username: ");
                     String username = scanner.nextLine();
                     System.out.print("Enter password: ");
                     String password = scanner.nextLine();
                     System.out.print("Enter your phone number: ");
-                    String phoneNumber = scanner.nextLine();
+                    String phoneNumber = scanner.nextLine();  // Get phone number
                     if (userManager.registerUser(username, password)) {
-
+                        // Create a new customer with the provided phone number
                         customer = new Customer(username, phoneNumber, 0.0);
                         System.out.println("Registration successful!");
                     }
                     break;
 
                 case 2:
-
+                    // Login
                     if (customer == null) {
                         System.out.println("Please register first.");
                         break;
@@ -53,12 +53,12 @@ public class Main {
                     System.out.print("Password: ");
                     password = scanner.nextLine();
                     if (userManager.loginUser(username, password)) {
-                        customer = new Customer(username, "0000000000", 1000.0);
+                        customer = new Customer(username, "0000000000", 1000.0); // Initialize wallet with $1000
                     }
                     break;
 
                 case 3:
-
+                    // Add product to store
                     System.out.print("Enter the product name: ");
                     String productName = scanner.nextLine();
                     System.out.print("Enter the product price: ");
@@ -69,12 +69,12 @@ public class Main {
                     break;
 
                 case 4:
-
+                    // View products
                     store.showProducts();
                     break;
 
                 case 5:
-
+                    // Add product to cart
                     if (customer == null) {
                         System.out.println("Please log in first.");
                         break;
@@ -90,7 +90,7 @@ public class Main {
                     break;
 
                 case 6:
-
+                    // View cart
                     if (customer == null) {
                         System.out.println("Please log in first.");
                         break;
@@ -99,7 +99,7 @@ public class Main {
                     break;
 
                 case 7:
-
+                    // Checkout and make payment
                     if (customer == null) {
                         System.out.println("Please log in first.");
                         break;
@@ -137,7 +137,7 @@ public class Main {
                     break;
 
                 case 9:
-
+                    // Exit the program
                     System.out.println("Exiting the program.");
                     scanner.close();
                     return;

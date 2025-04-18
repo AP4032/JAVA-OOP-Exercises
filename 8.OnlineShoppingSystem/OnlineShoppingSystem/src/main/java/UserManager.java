@@ -6,6 +6,7 @@ public class UserManager {
     public UserManager() {
         users = new HashMap<>();
     }
+
     public boolean registerUser(String username, String password) {
         if (users.containsKey(username)) {
             System.out.println("Username is already taken");
@@ -15,6 +16,7 @@ public class UserManager {
         System.out.println("Username is registered successfully");
         return true;
     }
+
     public boolean loginUser(String username, String password) {
         if (users.containsKey(username) && users.get(username).equals(password)) {
             System.out.println(" Login successful!");
