@@ -1,4 +1,4 @@
-# Library Management System 📚
+﻿# Library Management System 📚
 
 ## Overview
 This is a **Library Management System** built using **OOP principles in Java**. It allows users to borrow and return books, and enables an admin to manage the library collection.
