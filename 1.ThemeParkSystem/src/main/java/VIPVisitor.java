@@ -1,14 +1,10 @@
 public class VIPVisitor extends Visitor {
-
-    public VIPVisitor(String name, int height) {
-        super(name, height); 
+    public VIPVisitor(String name) {
+        super(name);
     }
 
     @Override
-    public void joinQueue(Ride ride) {
-        if (ride != null) {
-            ride.addToQueue(this);  
-            System.out.println(getName() + " (VIP) has joined the queue for " + ride.getName());
-        }
+    public boolean isVIP() {
+        return true;
     }
 }

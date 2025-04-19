@@ -1,58 +1,44 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
 
 public class Ride {
     private String name;
-    private int duration;      
-    private int capacity;      
-    private Queue<Visitor> queue;
+    private int capacity;
+    private int duration; // دقیقه
 
-    public Ride(String name, int duration, int capacity) {
+    public Ride(String name, int capacity, int duration) {
         this.name = name;
-        this.duration = duration;
         this.capacity = capacity;
-        this.queue = new LinkedList<>();
+        this.duration = duration;
     }
-    
+
     public String getName() {
-    return name;
-}
+        return name;
+    }
 
-public int getDuration() {
-    return duration;
-}
+    public int getCapacity() {
+        return capacity;
+    }
 
-public int getCapacity() {
-    return capacity;
-}
+    public void fillFromQueue(ArrayList<Visitor> queue) {
+        System.out.println("\nStarting ride: " + name);
+        int count = 0;
 
-    
-    public void addToQueue(Visitor visitor) {
-        if (visitor instanceof VIPVisitor) {
-            
-            LinkedList<Visitor> tempList = (LinkedList<Visitor>) queue;
-            tempList.addFirst(visitor);
-        } else {
-            queue.add(visitor);
+        for (int i = 0; i < queue.size(); i++) {
+            if (count >= capacity) {
+                break;
+            }
+
+            Visitor v = queue.get(i);
+            System.out.println(" - " + v.getName() + (v.isVIP() ? " [VIP]" : ""));
+            count++;
+        }
+
+        for (int i = 0; i < count; i++) {
+            queue.remove(0); // حذف از صف
         }
     }
 
-    public void startRide() {
-    if (queue.size() < capacity) {
-        System.out.println("🚫 Not enough people to start " + name + ". Need " + (capacity - queue.size()) + " more.");
-        return;
-    }
-
-    System.out.println("🎢 Starting ride: " + name);
-    for (int i = 0; i < capacity; i++) {
-        Visitor v = queue.poll();
-        System.out.println("✅ " + v.getName() + " is enjoying the ride!");
-    }
-    System.out.println("🎉 Ride finished!\n");
-}
-
-    @Override
-    public String toString() {
-        return "Ride{name='" + name + "', duration=" + duration + "min, capacity=" + capacity + "}";
+    public void start() {
+        System.out.println("Ride is running for " + duration + " minutes...");
     }
 }

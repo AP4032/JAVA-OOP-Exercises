@@ -1,25 +1,27 @@
 import java.util.ArrayList;
 
 public class Admin {
-    private ArrayList<Ride> rides;
 
-    public Admin() {
-        this.rides = new ArrayList<>();
+    public void addRide(ArrayList<Ride> rides, Ride newRide) {
+        rides.add(newRide);
+        System.out.println("Ride added: " + newRide.getName());
     }
 
-    // اضافه کردن وسیله بازی
-    public void addRide(Ride ride) {
-        rides.add(ride);
-        System.out.println("New ride added: " + ride.getName());
+    public void removeRide(ArrayList<Ride> rides, String rideName) {
+        for (int i = 0; i < rides.size(); i++) {
+            if (rides.get(i).getName().equalsIgnoreCase(rideName)) {
+                rides.remove(i);
+                System.out.println("Ride removed: " + rideName);
+                return;
+            }
+        }
+        System.out.println("Ride not found: " + rideName);
     }
 
-    // حذف وسیله بازی
-    public void removeRide(Ride ride) {
-        rides.remove(ride);
-        System.out.println("Ride removed: " + ride.getName());
-    }
-
-    public ArrayList<Ride> getRides() {
-        return rides;
+    public void showAllRides(ArrayList<Ride> rides) {
+        System.out.println("All Rides:");
+        for (Ride r : rides) {
+            System.out.println("- " + r.getName() + " (Capacity: " + r.getCapacity() + ")");
+        }
     }
 }
