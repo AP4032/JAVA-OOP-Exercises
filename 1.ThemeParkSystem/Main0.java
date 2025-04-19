@@ -6,16 +6,23 @@ public class Main0 {
         Scanner scanner = new Scanner(System.in);
         Admin0 admin= new Admin0();
         String D;
+        Ride Train=new Ride("Train",5,5,5);
+        Ride ShipSvr=new Ride("ShipSvr",20,5,5);
+        Ride FrogDark=new Ride("FrogDark",4,2,5);
+        admin.addRide(Train);
+        admin.addRide(ShipSvr);
+        admin.addRide(FrogDark);
         boolean Closed=false;
         while(!Closed){
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░");
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  Big Masoud Amusement Park is open.░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
-            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  1.add Ried                        ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
+            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  1.add Ride                        ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  2.add Visitor                     ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  3.add VIP Visitor                 ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
-            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  4.Run Ried                        ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
+            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  4.Run Ride                        ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  5.se All Rides capacity           ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
-            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  6.Exit                            ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
+            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  6.Delete Ride                     ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
+            System.out.println("░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░  7.Exit                            ░▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒░");
             System.out.println("░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░");
             D=scanner.nextLine();
             switch (D.charAt(0)-'0'){
@@ -78,6 +85,14 @@ public class Main0 {
                     }
                     break;
                 case 6:
+                    System.out.println("Enter Name Ride");
+                    String NameRide=scanner.nextLine();
+                    Ride ride1= TureRide(admin,NameRide);
+                    if(ride1!=null){
+                        admin.DeleteRide(ride1);
+                    }else System.out.println("No Find Ride");
+                    break;
+                case 7:
                     System.out.println("Big Masoud playground was closed.");
                     Closed=true;
 

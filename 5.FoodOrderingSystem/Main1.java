@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Formattable;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -7,7 +7,17 @@ public class Main1 {
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();
         Scanner scanner=new Scanner(System.in);
-        Boolean Closed= true;
+        MenuItem burger = new MenuItem("Burger", 5.99);
+        MenuItem pizza = new MenuItem("Pizza", 8.99);
+        MenuItem Potato = new MenuItem("Potato", 2.99);
+        MenuItem CocaCola = new MenuItem("CocaCola", 1.99);
+        MenuItem Pepsi = new MenuItem("Pepsi", 1.99);
+        restaurant.SaveFoodInmMenu(burger);
+        restaurant.SaveFoodInmMenu(pizza);
+        restaurant.SaveFoodInmMenu(Potato);
+        restaurant.SaveFoodInmMenu(CocaCola);
+        restaurant.SaveFoodInmMenu(Pepsi);
+        boolean Closed= true;
         while(Closed){
             System.out.println("\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55 \uD83E\uDD69");
             System.out.println("\uD83E\uDD69 Welcome to Big Masoud Restaurant \uD83E\uDD69");
@@ -15,7 +25,9 @@ public class Main1 {
             System.out.println("\uD83C\uDF5F 2.add Customer                   \uD83C\uDF5F");
             System.out.println("\uD83C\uDF55 3.Kitchen                        \uD83C\uDF55");
             System.out.println("\uD83E\uDD69 4.Order status                   \uD83E\uDD69");
-            System.out.println("\uD83E\uDD69 5.Exit                           \uD83C\uDF54");
+            System.out.println("\uD83C\uDF5F 5.Delete Food in List            \uD83C\uDF5F");
+            System.out.println("\uD83C\uDF55 6.Show Menu                      \uD83C\uDF55");
+            System.out.println("\uD83E\uDD69 7.Exit                           \uD83C\uDF54");
             System.out.println("\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55\uD83E\uDD69 \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55 \uD83E\uDD69");
 
             String Where=scanner.nextLine();
@@ -57,8 +69,8 @@ public class Main1 {
                     String ChooseFood;
                     String yesorno;
                     List<MenuItem> AllChoose =new ArrayList<>();
-                    Double Sorthsab=0.0;
-                    Boolean EndChoose=true;
+                    double Sorthsab=0.0;
+                    boolean EndChoose=true;
                     for (MenuItem menu: restaurant.getMenuFood()){
                         System.out.println(menu.getName()+"  $"+ menu.getPrice());
                     }
@@ -99,7 +111,7 @@ public class Main1 {
                     }else{ System.out.println("No find Order");}
                     break;
                 case 4:
-                    Double Status=0.0;
+                    double Status=0.0;
                     for (Order Ord:restaurant.getOrders()){
                         for(MenuItem item : Ord.getitems()){
                             System.out.print(" ["+item.getName()+"]");
@@ -109,17 +121,31 @@ public class Main1 {
                         System.out.println("    Status:"+Ord.getStatus());
                     }
                     break;
-                case 5 :
+                case 5:
+                    System.out.println("Enter name food");
+                    String nameFooD=scanner.nextLine();
+                    MenuItem menuItem10=TrueFood(restaurant,nameFooD);
+                    if(menuItem10!=null){
+                        restaurant.DeleteFood(menuItem10);
+                    }else System.out.println("No Find Food");
+                    break;
+                case 6:
+                    System.out.println("---------Menu----------");
+                    for (MenuItem menu: restaurant.getMenuFood()){
+                        System.out.println(menu.getName()+"  $"+ menu.getPrice());
+                    }
+                    System.out.println("-----------------------");
+                    break;
+                case 7 :
                     System.out.println("Closed Restaurant");
                     Closed=false;
                     break;
             }
 
         }
-        MenuItem burger = new MenuItem("Burger", 5.99);
-        MenuItem pizza = new MenuItem("Pizza", 8.99);
 
-        Customer customer = new Customer("Alice");
+
+
 
     }
     public static MenuItem TrueFood(Restaurant restaurant, String FoodTrue ){

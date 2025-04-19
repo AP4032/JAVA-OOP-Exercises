@@ -15,4 +15,8 @@ public class Admin0 {
     public List<Ride> getRides(){
         return rides;
     }
+    public void DeleteRide(Ride ride){
+        rides.remove(ride);
+        System.out.println("Delete "+ride.getname()+" Done.");
+    }
 }

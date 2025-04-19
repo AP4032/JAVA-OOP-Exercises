@@ -10,7 +10,7 @@ public class Restaurant {
     }
     public void SaveFoodInmMenu(MenuItem menuItem){
         MenuFood.add(menuItem);
-        System.out.print("New Food in menu");
+        System.out.println("New Food in menu");
     }
     public void receiveOrder(Order order) {
         orders.add(order);
@@ -26,6 +26,10 @@ public class Restaurant {
     }
     public List<Order> getOrders(){
         return orders;
+    }
+    public void DeleteFood(MenuItem menuItem){
+        MenuFood.remove(menuItem);
+        System.out.println("Delete "+menuItem.getName()+" Done.");
     }
 
 }
