@@ -12,7 +12,7 @@ This is an **Online Shopping System** built using **OOP principles in Java**. It
 ```plaintext
 OnlineShoppingSystem
  ├── Product
- ├── ShoppingCart
+ ├── ShoppingCard
  ├── Customer
  ├── Store
  ├── Main (Runner)
@@ -41,15 +41,15 @@ public class Product {
 }
 ```
 
-### `ShoppingCart.java`
+### `ShoppingCard.java`
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCart {
+public class ShoppingCard {
     private List<Product> items;
 
-    public ShoppingCart() {
+    public ShoppingCard() {
         this.items = new ArrayList<>();
     }
 
@@ -75,23 +75,24 @@ public class ShoppingCart {
 ```
 
 ### `Customer.java`
+
 ```java
 public class Customer {
-    private String name;
-    private ShoppingCart cart;
+   private String name;
+   private ShoppingCard cart;
 
-    public Customer(String name) {
-        this.name = name;
-        this.cart = new ShoppingCart();
-    }
+   public Customer(String name) {
+      this.name = name;
+      this.cart = new ShoppingCard();
+   }
 
-    public void addToCart(Product product) {
-        cart.addItem(product);
-    }
+   public void addToCart(Product product) {
+      cart.addItem(product);
+   }
 
-    public void placeOrder() {
-        cart.checkout();
-    }
+   public void placeOrder() {
+      cart.checkout();
+   }
 }
 ```
 
