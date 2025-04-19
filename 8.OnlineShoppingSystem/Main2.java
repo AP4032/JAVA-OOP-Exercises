@@ -23,10 +23,10 @@ public class Main2 {
             System.out.println("┃2.new Customer                        ┃");
             System.out.println("┃3.Where is my product?(Customer)      ┃");
             System.out.println("┃4.Admin(Order management)             ┃");
-            System.out.println("┃5.Show All Product                    ┃");;
-            System.out.println("┃6.Show All Customer                   ┃");;
-            System.out.println("┃7.Exit                                ┃");;
-            System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");;
+            System.out.println("┃5.Show All Product                    ┃");
+            System.out.println("┃6.Show All Customer                   ┃");
+            System.out.println("┃7.Exit                                ┃");
+            System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
             double PriceProduct;
             number=scanner.nextLine();
             switch(number.charAt(0)-'0'){
@@ -100,23 +100,23 @@ public class Main2 {
                         ChooseCustomer.setStatus(Choose);
                     }else System.out.println("NO Find Customer");
                     break;
-                case 5:;
-                    ShowMenu(store);;
-                    break;;
-                case 6:;
-                    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");;
-                    for(Customer0 cus  :store.getCustomer()){;
-                        System.out.println("Name:"+cus.getName()+"   Status:"+cus.getStatus() );;
-                        System.out.println("All Items: ");;
-                        cus.ShowItems();;
-                        System.out.println("Total Price Items:"+cus.getCalculateTotal());;
-                    };
-                    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");;
-                    break;;
-                case 7:;
-                    System.out.println("Closed");;
-                    Closed=false;;
-                    break;;
+                case 5:
+                    ShowMenu(store);
+                    break;
+                case 6:
+                    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                    for(Customer0 cus  :store.getCustomer()){
+                        System.out.println("Name:"+cus.getName()+"   Status:"+cus.getStatus() );
+                        System.out.println("All Items: ");
+                        cus.ShowItems();
+                        System.out.println("Total Price Items:"+cus.getCalculateTotal());
+                    }
+                    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                    break;
+                case 7:
+                    System.out.println("Closed");
+                    Closed=false;
+                    break;
             }
         }
 
