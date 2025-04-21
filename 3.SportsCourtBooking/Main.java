@@ -64,10 +64,12 @@ public class Main {
         System.out.println("********** Creat Account **********");
         System.out.println("Enter your name:");
         String name = Utils.getString();
-        for (Player player : admin.getPlayers()) {
-            if(player.getName().equals(name) ){
-                System.out.println("This name already exists!");
-                return;
+        if (!(admin.getPlayers().isEmpty())){
+            for (Player player : admin.getPlayers()) {
+                if(player.getName().equals(name) ){
+                    System.out.println("This name already exists!");
+                    return;
+                }
             }
         }
         Player p=new Player(name);
