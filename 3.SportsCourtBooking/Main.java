@@ -63,6 +63,13 @@ public class Main {
     private static void createAccount() {
         System.out.println("********** Creat Account **********");
         System.out.println("Enter your name:");
+        String name = Utils.getString();
+        for (Player player : admin.getPlayers()) {
+            if(player.getName().equals(name) ){
+                System.out.println("This name already exists!");
+                return;
+            }
+        }
         Player p=new Player(Utils.getString());
         System.out.println("Your user ID :"+p.getUserID()+" please saved it and don't forget it.");
         System.out.println("Do you want to recharge your wallet? (Y/N)");
