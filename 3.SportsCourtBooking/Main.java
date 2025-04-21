@@ -70,7 +70,7 @@ public class Main {
                 return;
             }
         }
-        Player p=new Player(Utils.getString());
+        Player p=new Player(name);
         System.out.println("Your user ID :"+p.getUserID()+" please saved it and don't forget it.");
         System.out.println("Do you want to recharge your wallet? (Y/N)");
         char choice = 0;
