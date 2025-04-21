@@ -28,6 +28,7 @@ public class Main {
                     System.out.print("Enter student name: ");
                     String studentName = scanner.nextLine();
                     Student student = new Student(studentName);
+
                     admin.addStudent(student);
                     System.out.println("Student created with ID: " + student.getStudentId());
                     break;
