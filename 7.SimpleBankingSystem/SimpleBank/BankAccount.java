@@ -5,6 +5,9 @@ public class BankAccount {
     protected String accountNumber;
     protected double balance;
 
+    protected void emtehan(){
+        System.out.println(" ");
+    }
     public BankAccount(String accountNumber) {
         this.accountNumber = accountNumber;
         this.balance = 0.0;

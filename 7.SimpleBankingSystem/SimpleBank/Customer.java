@@ -6,6 +6,7 @@ public class Customer {
     private BankAccount account;
     private SavingAccount savingsAccount;
 
+
     public Customer(String name, String accountNumber, boolean isSavings) {
         this.name = name;
         if (isSavings) {
