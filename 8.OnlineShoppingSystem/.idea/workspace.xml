@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37f82cb0-f4b3-4f92-aede-888b87f570ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../1.ThemeParkSystem/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.ThemeParkSystem/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.ThemeParkSystem/Ride.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.ThemeParkSystem/VIPVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.ThemeParkSystem/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.WordGuessGame/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.WordGuessGame/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.WordGuessGame/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3.SportsCourtBooking/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3.SportsCourtBooking/Court.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3.SportsCourtBooking/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3.SportsCourtBooking/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4.LibraryManagementSystem/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4.LibraryManagementSystem/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4.LibraryManagementSystem/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4.LibraryManagementSystem/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SamaAzadi"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SamaAzadi/JAVA-OOP-Exercises.git",
+    "accountId": "f59c1b3f-f04c-4ab3-acf9-cad8f0c91253"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2vox601zTcyd2BkFh5qeULGOOdi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mardin/JAVA-OOP-Exercises"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37f82cb0-f4b3-4f92-aede-888b87f570ac" name="Changes" comment="" />
+      <created>1744825048938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744825048938</updated>
+    </task>
+    <servers />
+  </component>
+</project>
