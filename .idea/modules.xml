@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2.WordGuessGame/2.WordGuessGame.iml" filepath="$PROJECT_DIR$/2.WordGuessGame/2.WordGuessGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.SportsCourtBooking/3.SportsCourtBooking.iml" filepath="$PROJECT_DIR$/3.SportsCourtBooking/3.SportsCourtBooking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.LibraryManagementSystem/4.LibraryManagementSystem.iml" filepath="$PROJECT_DIR$/4.LibraryManagementSystem/4.LibraryManagementSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7.SimpleBankingSystem/7.SimpleBankingSystem.iml" filepath="$PROJECT_DIR$/7.SimpleBankingSystem/7.SimpleBankingSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA-OOP-Exercises.iml" filepath="$PROJECT_DIR$/JAVA-OOP-Exercises.iml" />
+    </modules>
+  </component>
+</project>
