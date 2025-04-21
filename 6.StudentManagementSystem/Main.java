@@ -132,7 +132,6 @@ public class Main {
         } else {
             for (Course c : admin.getCourses()) {
                 System.out.println("Course Name: " + c.getName());
-            }
-        }
+            }        }
     }
 }
