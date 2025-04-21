@@ -5,6 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Admin admin = new Admin();
 
+        
         while (true) {
             System.out.println("\n=== Theme Park System ===");
             System.out.println("1. Add Ride");
