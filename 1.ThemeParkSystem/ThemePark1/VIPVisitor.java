@@ -1,3 +1,5 @@
+package ThemePark1 ;
+
 public class VIPVisitor extends Visitor{
 
     public VIPVisitor(String name , int ticket){

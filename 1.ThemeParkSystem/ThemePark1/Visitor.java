@@ -1,11 +1,17 @@
+package ThemePark1 ;
+
 public class Visitor {
-    private String name;
-    private int ticket;
+    protected String name;
+    protected int ticket;
 
     public Visitor(String name , int ticket){
         this.name = name;
         this.ticket = ticket;
     }
+
+    public Visitor(String visitorName) {
+    }
+
     public String getname(){
         return name;
     }
@@ -17,6 +23,6 @@ public class Visitor {
             ticket--;
             return true;
         }
-    return false;
+        return false;
     }
 }

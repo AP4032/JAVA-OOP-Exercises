@@ -1,3 +1,6 @@
+package ThemePark1 ;
+
+import java.util.Scanner;
 
 import java.util.Scanner;
 
@@ -62,7 +65,7 @@ public class Main {
                     String vipRideName = scanner.nextLine();
                     Ride vipRide = admin.findRideByName(vipRideName);
                     if (vipRide != null) {
-                        VIPVisitor vip = new VIPVisitor(vipName);
+                        VIPVisitor vip = new VIPVisitor(vipName , 1);
                         vip.getPriorityAccess(vipRide);
                         vipRide.addVisitor(vip);
                     } else {

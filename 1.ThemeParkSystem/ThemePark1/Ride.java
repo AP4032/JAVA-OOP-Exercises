@@ -1,11 +1,13 @@
+package ThemePark1 ;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class Ride {
-    private String name;
-    private int capacity;
-    private int duration; // in minutes
-    private Queue<Visitor> queue;
+    protected String name;
+    protected int capacity;
+    protected int duration; // in minutes
+    protected Queue<Visitor> queue;
 
     public Ride(String name, int capacity, int duration) {
         this.name = name;

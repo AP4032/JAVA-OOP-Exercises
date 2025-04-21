@@ -1,3 +1,6 @@
+package ThemePark1 ;
+
+
 public class WaterRide extends Ride {
 
     public WaterRide(String name, int capacity, int duration) {
@@ -13,3 +16,4 @@ public class WaterRide extends Ride {
         }
     }
 }
+

@@ -1,3 +1,5 @@
+package ThemePark1 ;
+
 public class RollerCoasterRide extends Ride {
     public RollerCoasterRide(String name, int capacity, int duration) {
         super(name, capacity, duration);
