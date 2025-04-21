@@ -7,7 +7,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-class Main{
+class Main {
 
     public static void main(String[] args) {
         MainSystem mainSystem = new MainSystem();
@@ -188,5 +188,168 @@ class MainSystem {
             e.printStackTrace();
             return null;
         }
+    }
+}
+
+class Admin {
+    private String username;
+    private String hashedPassword;
+    private String name;
+    private int adminId;
+    private String email;
+    private String[] permissions;
+
+    public Admin(String username, String hashedPassword, String name, int adminId, String email,
+                 String[] permissions) {
+        this.username = username;
+        this.hashedPassword = hashedPassword;
+        this.name = name;
+        this.adminId = adminId;
+        this.email = email;
+        this.permissions = permissions;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean verifyPassword(String password) {
+        String hashedPassword = hashPassword(password);
+        return this.hashedPassword.equals(hashedPassword);
+    }
+
+    public boolean hasPermission(String permission) {
+        if (this.permissions == null) {
+            return false;
+        }
+        for (String perm : this.permissions) {
+            if (perm.equals(permission)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void generateReport(String reportType, List<Transaction> transactions) {
+        if (reportType.equals("sales")) {
+            double totalSales = 0;
+            for (Transaction transaction : transactions) {
+                totalSales += transaction.getAmount();
+            }
+            System.out.println("Total Sales: $" + totalSales);
+        } else {
+            System.out.println("Unsupported report type.");
+        }
+    }
+
+    private String hashPassword(String password) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(password.getBytes());
+            return Base64.getEncoder().encodeToString(hash);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+
+class Ride {
+    private String name;
+    private int rideId;
+    private int capacity;
+
+    public Ride(String name, int rideId, int capacity) {
+        this.name = name;
+        this.rideId = rideId;
+        this.capacity = capacity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRideId() {
+        return rideId;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+}
+
+class Visitor {
+    private String name;
+    private int visitorId;
+
+    public Visitor(String name, int visitorId) {
+        this.name = name;
+        this.visitorId = visitorId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVisitorId() {
+        return visitorId;
+    }
+
+    @Override
+    public String toString() {
+        return "Visitor{" +
+                "name='" + name + '\'' +
+                ", visitorId=" + visitorId +
+                '}';
+    }
+}
+
+class VIPVisitor extends Visitor {
+    private boolean isVip;
+
+    public VIPVisitor(String name, int visitorId) {
+        super(name, visitorId);
+        this.isVip = true;
+    }
+
+    public boolean isVip() {
+        return isVip;
+    }
+
+    @Override
+    public String toString() {
+        return "VIPVisitor{" +
+                "name='" + getName() + '\'' +
+                ", visitorId=" + getVisitorId() +
+                ", isVip=" + isVip +
+                '}';
+    }
+}
+
+class Transaction {
+    private String item;
+    private double amount;
+    private Date date;
+
+    public Transaction(String item, double amount, Date date) {
+        this.item = item;
+        this.amount = amount;
+        this.date = date;
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
