@@ -1,33 +1,33 @@
 # Library Management System 📚
 
 ## Overview
-This is a **Library Management System** built using **OOP principles in Java**. It allows users to borrow and return books, and enables an admin to manage the library collection.
+This is a **Library Management System** built using **OOP principles in Java**. It allows users to borrow and return books, and enables an library to manage the library collection.
 
 ## Features
 - Users can borrow and return books.
-- Admin can add/remove books.
+- Library can add/remove books.
 - Track availability of books.
 
 ## Classes & Structure
 ```plaintext
 LibraryManagementSystem
- ├── Book
+ ├── Manga
  ├── User
- ├── Admin
+ ├── Library
  ├── Library
  ├── Main (Runner)
 ```
 
 ## Implementation
 
-### `Book.java`
+### `Manga.java`
 ```java
-public class Book {
+public class Manga {
     private String title;
     private String author;
     private boolean isAvailable;
 
-    public Book(String title, String author) {
+    public Manga(String title, String author) {
         this.title = title;
         this.author = author;
         this.isAvailable = true;
@@ -54,73 +54,76 @@ public class Book {
 ```
 
 ### `User.java`
+
 ```java
 public class User {
-    private String name;
+   private String name;
 
-    public User(String name) {
-        this.name = name;
-    }
+   public User(String name) {
+      this.name = name;
+   }
 
-    public void borrowBook(Book book) {
-        if (book.isAvailable()) {
-            book.borrowBook();
-            System.out.println(name + " borrowed the book: " + book.getTitle());
-        } else {
-            System.out.println("Sorry, this book is already borrowed.");
-        }
-    }
+   public void borrowBook(Manga manga) {
+      if (manga.isAvailable()) {
+         manga.borrowManga();
+         System.out.println(name + " borrowed the manga: " + manga.getTitle());
+      } else {
+         System.out.println("Sorry, this manga is already borrowed.");
+      }
+   }
 
-    public void returnBook(Book book) {
-        book.returnBook();
-        System.out.println(name + " returned the book: " + book.getTitle());
-    }
+   public void returnBook(Manga manga) {
+      manga.returnManga();
+      System.out.println(name + " returned the manga: " + manga.getTitle());
+   }
 }
 ```
 
-### `Admin.java`
+### `Library.java`
+
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
-public class Admin {
-    private List<Book> books;
+public class Library {
+   private List<Manga> mangas;
 
-    public Admin() {
-        this.books = new ArrayList<>();
-    }
+   public Library() {
+      this.books = new ArrayList<>();
+   }
 
-    public void addBook(Book book) {
-        books.add(book);
-        System.out.println("Added book: " + book.getTitle());
-    }
+   public void addBook(Manga manga) {
+      books.add(manga);
+      System.out.println("Added manga: " + manga.getTitle());
+   }
 
-    public void removeBook(Book book) {
-        books.remove(book);
-        System.out.println("Removed book: " + book.getTitle());
-    }
+   public void removeBook(Manga manga) {
+      books.remove(manga);
+      System.out.println("Removed manga: " + manga.getTitle());
+   }
 
-    public List<Book> getBooks() {
-        return books;
-    }
+   public List<Manga> getBooks() {
+      return books;
+   }
 }
 ```
 
 ### `Main.java`
+
 ```java
 public class Main {
-    public static void main(String[] args) {
-        Admin admin = new Admin();
-        Book book1 = new Book("1984", "George Orwell");
-        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+   public static void main(String[] args) {
+      Library library = new Library();
+      Manga manga1 = new Manga("1984", "George Orwell");
+      Manga manga2 = new Manga("To Kill a Mockingbird", "Harper Lee");
 
-        admin.addBook(book1);
-        admin.addBook(book2);
+      library.addManga(manga1);
+      library.addManga(manga2);
 
-        User user = new User("Alice");
-        user.borrowBook(book1);
-        user.returnBook(book1);
-    }
+      User user = new User("Alice");
+      user.borrowManga(manga1);
+      user.returnManga(manga1);
+   }
 }
 ```
 
@@ -133,7 +136,7 @@ public class Main {
 ## Future Enhancements
 - Implement a search system for books.
 - Add user authentication.
-- Implement overdue book tracking.
+- Implement overdue manga tracking.
 
 ---
 📖 **Manage your library with ease!** 🎓

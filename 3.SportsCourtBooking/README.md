@@ -96,22 +96,23 @@ public class Admin {
 ```
 
 ### `Main.java`
+
 ```java
 public class Main {
-    public static void main(String[] args) {
-        Admin admin = new Admin();
-        Court basketballCourt = new Court("Basketball");
-        Court tennisCourt = new Court("Tennis");
-        
-        admin.addCourt(basketballCourt);
-        admin.addCourt(tennisCourt);
-        
-        Player player1 = new Player("John");
-        Player player2 = new Player("Alice");
-        
-        player1.bookCourt(basketballCourt);
-        player2.bookCourt(basketballCourt); // Should print "Court is already booked!"
-    }
+   public static void main(String[] args) {
+      Admin admin = new Admin();
+      Court basketballCourt = new Court("Basketball");
+      Court tennisCourt = new Court("Tennis");
+
+      admin.addCourse(basketballCourt);
+      admin.addCourse(tennisCourt);
+
+      Player player1 = new Player("John");
+      Player player2 = new Player("Alice");
+
+      player1.bookCourt(basketballCourt);
+      player2.bookCourt(basketballCourt); // Should print "Court is already booked!"
+   }
 }
 ```
 
