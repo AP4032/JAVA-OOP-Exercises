@@ -1,0 +1,16 @@
+java
+python
+programming
+developer
+object
+class
+inheritance
+polymorphism
+encapsulation
+abstraction
+variable
+method
+function
+array
+loop
+condition
