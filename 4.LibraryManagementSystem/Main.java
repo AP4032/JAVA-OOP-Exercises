@@ -5,7 +5,7 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static Admin admin= new Admin();
     public static void main(String[] args) {
-        System.out.println("********** Welcome to Sports Court Booking System **********");
+        System.out.println("********** Welcome to Library Management System **********");
         mainMenu();
         System.out.println("Bye Bye .....");
     }
