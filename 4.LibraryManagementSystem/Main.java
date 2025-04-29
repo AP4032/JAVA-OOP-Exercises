@@ -1,20 +1,7 @@
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class Main {
-//    public static void main(String[] args) {
-//        Admin admin = new Admin();
-//        Book book1 = new Book("1984", "George Orwell");
-//        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
-//
-//        admin.addBook(book1);
-//        admin.addBook(book2);
-//
-//        User user = new User("Alice");
-//        user.borrowBook(book1);
-//        user.returnBook(book1);
-//    }
-
     private static Scanner scanner = new Scanner(System.in);
     private static Admin admin= new Admin();
     public static void main(String[] args) {
