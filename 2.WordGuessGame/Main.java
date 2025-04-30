@@ -21,6 +21,7 @@ public class Main {
     }
     private static void playGame() {
         Game game = new Game();
+        System.out.println("Subjects : [ Food | Programming | Car | Color | Game | Country | Name ]");
         System.out.println("Please enter the name of the subject that you want to guess the words for:");
         String subject = scanner.nextLine().toLowerCase();
         boolean correct = false;
